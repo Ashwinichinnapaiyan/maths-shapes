@@ -23,7 +23,7 @@
         let rad= prompt('Enter the radius of the circle');
         let ans = pi*rad*rad;
         console.log('area of the circle:',ans)
-        alert("The area of the circle is:${ans}");
+        alert(`The area of the circle is:,${ans}`);
     }
 
     function calculateSquare() 
@@ -31,7 +31,7 @@
         let a= prompt('Enter the side of the square');
         let res = a*a;
         console.log('area of the square:',res)
-        alert("The area of the square is: ${res}");
+        alert(`The area of the square is: ${res}`);
         
     }
 
@@ -42,24 +42,31 @@
         let height = prompt('Enter the height of the cylinder');
         let volume = pi*rad*rad* height;
         console.log('volume of the cylinder:',volume)
-        alert("The volume of the cylinder is: ${volume}");
+        alert(`The volume of the cylinder is: ${volume}`);
     }
 
     function calculateInterest() 
     {
         let principal = prompt('Enter the principal amount');
         let rate = prompt('Enter the rate of interest (in %)');
-        let tenure = prompt('Enter the tenure (in month)');
-        let interest = (principal * rate * tenure) / 100;
+        let tenure = prompt('Enter the tenure (in year)');
+        let interest = (principal * rate * tenure);
         console.log('Interest of the amount:',interest)
-        alert("The simple interest is: ${interest}");
+        alert(`The simple interest is: ${interest}`);
     }
 
     function alphabetFunction() 
     {
-        let alpha=prompt('Type a alphabet word')
-        console.log('It is alphabet word:',alphabet)
-        alert('You clicked on the Alphabet picture.');
+        let alpha=prompt('Type a alphabet')
+        
+        if(/^[a-zA-Z]+$/.test(alpha))
+        {
+            alert(`It is a alphabetic word:${alpha}`);
+
+        }
+        else{
+            alert('It is not a alphabetic word');
+        }
     }
 </script>
 
